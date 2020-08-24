@@ -5,7 +5,7 @@ import {
   LatLngPropType,
   LocationStylePropType,
   RegionPropType,
-  mapEventsPropType,
+  mapEventsPropType
 } from "../prop-types";
 import { MapStatus, MapType, Region, LatLng, Location } from "../types";
 import Component from "./component";
@@ -190,7 +190,7 @@ const events = [
   "onStatusChangeComplete",
   "onLocation",
   "onAnimateCancel",
-  "onAnimateFinished",
+  "onAnimateFinished"
 ];
 
 /**
@@ -225,7 +225,7 @@ export default class MapView extends Component<MapViewProps> {
     zoomEnabled: bool,
     scrollEnabled: bool,
     rotateEnabled: bool,
-    tiltEnabled: bool,
+    tiltEnabled: bool
   };
 
   nativeComponent = "AMapView";
@@ -243,7 +243,7 @@ export default class MapView extends Component<MapViewProps> {
   render() {
     const props = {
       ...this.props,
-      ...this.handlers(events),
+      ...this.handlers(events)
     };
     return <AMapView {...props} />;
   }
